@@ -186,9 +186,9 @@ def httpcall(url):
 
 			set_flag(1)
 
-			print 'Response Code 6969'
+			print 'Response Code 500'
 
-			code=6969
+			code=500
 
 	except urllib2.URLError, e:
 
@@ -218,7 +218,7 @@ class HTTPThread(threading.Thread):
 
 				code=httpcall(url)
 
-				if (code==6969) & (safe==1):
+				if (code==500) & (safe==1):
 
 					set_flag(2)
 
@@ -284,7 +284,7 @@ else:
 
 		host = m.group(2)
 
-		for i in range(6969):
+		for i in range(500):
 
 			t = HTTPThread()
 
